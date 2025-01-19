@@ -14,6 +14,8 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.resnet50 import preprocess_input
 import numpy as np
 import sklearn as sk
+import netoworkx from nx
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_spiit,GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import make_scorer, roc_auc_score, classification_report, confusion_matrix, roc_curve
@@ -37,8 +39,38 @@ image_similarity = 0.20
 price_similarity_model = 0.10
 threeshold_for_match = 0.80
 
+#Knowledhge graph is a network representation of entities and their relationships. It represents a real world data in a way that highlights the relationships and dependencies between different pieces of information.
+
+#Represents semantic relationships between 2 variables
+#Nodes connected by edges
+
+
+
+#In this case 
+#Nodes - Accounts, Transactions, Products
+#Edges - Relationships between them
+
+#Utilizes natural language processing
+
 
 model = resnet50.ResNet50(weights = "imagenet", include_top = False, pooling = "avg")
+
+
+
+class Knowledgegraph:
+    G = nx.Graph()
+    entities = [
+        ("Account1", "Transaction1"),
+        ("Account2", "Transaction1"),
+        ("Account1","Device1"),
+        ("Account2","Device2")
+    ]
+    G.add_edges_from(entities)
+
+    plt.figure(figsize = (10,8))
+    pos = 
+
+
 
 
 class algorithim:
