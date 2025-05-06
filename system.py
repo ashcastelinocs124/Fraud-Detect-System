@@ -163,10 +163,7 @@ class purchasefraud:#Helps figure out the purchase
             print("Images are different")
 
 
-        
-class sellerfraud:
-    def algorithim():
-        
+
 
 
 
